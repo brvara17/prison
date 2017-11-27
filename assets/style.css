@@ -1,0 +1,51 @@
+.container {
+	width: 100%;
+}
+
+.col-sm-8 p {
+  word-break: break-all;
+}
+
+/* tabs */
+.nav-tabs li.active {
+  height: 10%;
+}
+
+/* DataTable */
+th { font-size: 13px; }
+td { font-size: 12px; }
+.dataTables_filter {
+   width: 50%;
+   float: right;
+   text-align: right;
+}
+
+.dt-buttons {
+  display: inline-block;
+}
+
+/* bootstrap overridding */
+.form-group {
+	margin-bottom: 4px;
+}
+
+/* image carosal */
+.carousel, .item, .active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
