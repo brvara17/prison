@@ -428,7 +428,7 @@ class General extends CI_Controller {
 		                'middle_name' => $this->input->post('middleName'),
 		                'last_name' => $this->input->post('lastName'),
 		                'age' => $this->input->post('age'),
-		                'eye_color_id' => $this->input->post('eyeColor'),
+		                'eye_color_id' => $this->input->post('eyeColor'), //EYE_COLOR_TRAIL if we add a new entry for the prisoner it needs to go in this array
 		                'num_of_children' => $this->input->post('numOfChildren'),
 		                'criminal_history' => isset($criminal_history)? 1: 0,
 		                'permanent_province_id' => $this->input->post('permanentProvince'),

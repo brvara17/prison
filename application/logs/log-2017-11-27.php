@@ -1637,3 +1637,123 @@ DEBUG - 2017-11-27 02:39:55 --> Global POST, GET and COOKIE data sanitized
 INFO - 2017-11-27 02:39:55 --> Input Class Initialized
 INFO - 2017-11-27 02:39:55 --> Language Class Initialized
 ERROR - 2017-11-27 02:39:55 --> 404 Page Not Found: Assets/bootstrap
+INFO - 2017-11-27 03:17:43 --> Config Class Initialized
+INFO - 2017-11-27 03:17:43 --> Hooks Class Initialized
+DEBUG - 2017-11-27 03:17:43 --> UTF-8 Support Enabled
+INFO - 2017-11-27 03:17:43 --> Utf8 Class Initialized
+INFO - 2017-11-27 03:17:43 --> URI Class Initialized
+INFO - 2017-11-27 03:17:43 --> Router Class Initialized
+INFO - 2017-11-27 03:17:43 --> Output Class Initialized
+INFO - 2017-11-27 03:17:43 --> Security Class Initialized
+DEBUG - 2017-11-27 03:17:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-11-27 03:17:43 --> Input Class Initialized
+INFO - 2017-11-27 03:17:43 --> Language Class Initialized
+INFO - 2017-11-27 03:17:43 --> Loader Class Initialized
+INFO - 2017-11-27 03:17:43 --> Helper loaded: url_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: form_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: security_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: language_helper
+INFO - 2017-11-27 03:17:43 --> Database Driver Class Initialized
+INFO - 2017-11-27 03:17:43 --> Session: Class initialized using 'files' driver.
+INFO - 2017-11-27 03:17:43 --> Form Validation Class Initialized
+INFO - 2017-11-27 03:17:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2017-11-27 03:17:43 --> Pagination Class Initialized
+INFO - 2017-11-27 03:17:43 --> Table Class Initialized
+INFO - 2017-11-27 03:17:43 --> Controller Class Initialized
+INFO - 2017-11-27 03:17:43 --> Config Class Initialized
+INFO - 2017-11-27 03:17:43 --> Hooks Class Initialized
+DEBUG - 2017-11-27 03:17:43 --> UTF-8 Support Enabled
+INFO - 2017-11-27 03:17:43 --> Utf8 Class Initialized
+INFO - 2017-11-27 03:17:43 --> URI Class Initialized
+INFO - 2017-11-27 03:17:43 --> Router Class Initialized
+INFO - 2017-11-27 03:17:43 --> Output Class Initialized
+INFO - 2017-11-27 03:17:43 --> Security Class Initialized
+DEBUG - 2017-11-27 03:17:43 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-11-27 03:17:43 --> Input Class Initialized
+INFO - 2017-11-27 03:17:43 --> Language Class Initialized
+INFO - 2017-11-27 03:17:43 --> Loader Class Initialized
+INFO - 2017-11-27 03:17:43 --> Helper loaded: url_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: form_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: security_helper
+INFO - 2017-11-27 03:17:43 --> Helper loaded: language_helper
+INFO - 2017-11-27 03:17:43 --> Database Driver Class Initialized
+INFO - 2017-11-27 03:17:43 --> Session: Class initialized using 'files' driver.
+INFO - 2017-11-27 03:17:43 --> Form Validation Class Initialized
+INFO - 2017-11-27 03:17:43 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2017-11-27 03:17:43 --> Pagination Class Initialized
+INFO - 2017-11-27 03:17:43 --> Table Class Initialized
+INFO - 2017-11-27 03:17:43 --> Controller Class Initialized
+DEBUG - 2017-11-27 03:17:43 --> selected language: english
+INFO - 2017-11-27 03:17:43 --> Language file loaded: language/english/english_lang.php
+INFO - 2017-11-27 03:17:43 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\meta.php
+INFO - 2017-11-27 03:17:43 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\menu_bar.php
+INFO - 2017-11-27 03:17:43 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\footer.php
+INFO - 2017-11-27 03:17:43 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\home.php
+INFO - 2017-11-27 03:17:43 --> Final output sent to browser
+DEBUG - 2017-11-27 03:17:43 --> Total execution time: 0.3250
+INFO - 2017-11-27 03:17:48 --> Config Class Initialized
+INFO - 2017-11-27 03:17:48 --> Hooks Class Initialized
+DEBUG - 2017-11-27 03:17:48 --> UTF-8 Support Enabled
+INFO - 2017-11-27 03:17:48 --> Utf8 Class Initialized
+INFO - 2017-11-27 03:17:48 --> URI Class Initialized
+INFO - 2017-11-27 03:17:48 --> Router Class Initialized
+INFO - 2017-11-27 03:17:48 --> Output Class Initialized
+INFO - 2017-11-27 03:17:48 --> Security Class Initialized
+DEBUG - 2017-11-27 03:17:48 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-11-27 03:17:48 --> Input Class Initialized
+INFO - 2017-11-27 03:17:48 --> Language Class Initialized
+INFO - 2017-11-27 03:17:48 --> Loader Class Initialized
+INFO - 2017-11-27 03:17:48 --> Helper loaded: url_helper
+INFO - 2017-11-27 03:17:48 --> Helper loaded: form_helper
+INFO - 2017-11-27 03:17:48 --> Helper loaded: security_helper
+INFO - 2017-11-27 03:17:48 --> Helper loaded: language_helper
+INFO - 2017-11-27 03:17:48 --> Database Driver Class Initialized
+INFO - 2017-11-27 03:17:48 --> Session: Class initialized using 'files' driver.
+INFO - 2017-11-27 03:17:48 --> Form Validation Class Initialized
+INFO - 2017-11-27 03:17:48 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2017-11-27 03:17:48 --> Pagination Class Initialized
+INFO - 2017-11-27 03:17:48 --> Table Class Initialized
+INFO - 2017-11-27 03:17:48 --> Controller Class Initialized
+INFO - 2017-11-27 03:17:48 --> Model Class Initialized
+INFO - 2017-11-27 03:17:48 --> Model Class Initialized
+INFO - 2017-11-27 03:17:48 --> Model Class Initialized
+INFO - 2017-11-27 03:17:48 --> Model Class Initialized
+DEBUG - 2017-11-27 03:17:48 --> selected language: english
+INFO - 2017-11-27 03:17:48 --> Language file loaded: language/english/english_lang.php
+INFO - 2017-11-27 03:17:49 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\meta.php
+INFO - 2017-11-27 03:17:49 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\menu_bar.php
+INFO - 2017-11-27 03:17:49 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\footer.php
+INFO - 2017-11-27 03:17:49 --> File loaded: D:\ProgramFiles\wamp64\www\prison\application\views\prisoner_list.php
+INFO - 2017-11-27 03:17:49 --> Final output sent to browser
+DEBUG - 2017-11-27 03:17:49 --> Total execution time: 0.4550
+INFO - 2017-11-27 03:17:51 --> Config Class Initialized
+INFO - 2017-11-27 03:17:51 --> Hooks Class Initialized
+DEBUG - 2017-11-27 03:17:51 --> UTF-8 Support Enabled
+INFO - 2017-11-27 03:17:51 --> Utf8 Class Initialized
+INFO - 2017-11-27 03:17:51 --> URI Class Initialized
+INFO - 2017-11-27 03:17:51 --> Router Class Initialized
+INFO - 2017-11-27 03:17:51 --> Output Class Initialized
+INFO - 2017-11-27 03:17:51 --> Security Class Initialized
+DEBUG - 2017-11-27 03:17:51 --> Global POST, GET and COOKIE data sanitized
+INFO - 2017-11-27 03:17:51 --> Input Class Initialized
+INFO - 2017-11-27 03:17:51 --> Language Class Initialized
+INFO - 2017-11-27 03:17:51 --> Loader Class Initialized
+INFO - 2017-11-27 03:17:51 --> Helper loaded: url_helper
+INFO - 2017-11-27 03:17:51 --> Helper loaded: form_helper
+INFO - 2017-11-27 03:17:51 --> Helper loaded: security_helper
+INFO - 2017-11-27 03:17:51 --> Helper loaded: language_helper
+INFO - 2017-11-27 03:17:52 --> Database Driver Class Initialized
+INFO - 2017-11-27 03:17:52 --> Session: Class initialized using 'files' driver.
+INFO - 2017-11-27 03:17:52 --> Form Validation Class Initialized
+INFO - 2017-11-27 03:17:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2017-11-27 03:17:52 --> Pagination Class Initialized
+INFO - 2017-11-27 03:17:52 --> Table Class Initialized
+INFO - 2017-11-27 03:17:52 --> Controller Class Initialized
+INFO - 2017-11-27 03:17:52 --> Model Class Initialized
+INFO - 2017-11-27 03:17:52 --> Model Class Initialized
+INFO - 2017-11-27 03:17:52 --> Model Class Initialized
+INFO - 2017-11-27 03:17:52 --> Model Class Initialized
+DEBUG - 2017-11-27 03:17:52 --> selected language: english
+INFO - 2017-11-27 03:17:52 --> Language file loaded: language/english/english_lang.php
+INFO - 2017-11-27 03:17:52 --> Final output sent to browser
+DEBUG - 2017-11-27 03:17:52 --> Total execution time: 0.4700
