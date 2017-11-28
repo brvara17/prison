@@ -59,6 +59,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('hair_color'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="hairColor"><?= $prisoner->hair_color; ?></p>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="numOfChildren"><?= $prisoner->num_of_children; ?></p>

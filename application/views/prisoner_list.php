@@ -7,10 +7,6 @@
 	<body style="padding-top: 70px;" dir="<?=$this->session->userdata('direction') ?>">
 		<?php $this->load->view('menu_bar'); ?>
 		<div class="container">
-		// Add a condition to display checkbox for user that can add prisoner such as Admin 
-		// AND
-		// Remove other users from seeing the 'Add New User' button
-		
 			<h3>
 				&nbsp;<?= $this->lang->line('prisoners_list'); ?>&nbsp;
 				<button class="btn btn-success pull-right" onclick="new_record()"><i class="glyphicon glyphicon-plus"></i> Add New Prisoner</button>
@@ -28,6 +24,7 @@
 	                    <th><?= $this->lang->line('last_name'); ?></th>
 	                    <th><?= $this->lang->line('age'); ?></th>
 	                    <th><?= $this->lang->line('eye_color'); ?></th>
+						<th><?= $this->lang->line('hair_color'); ?></th>
 	                    <th><?= $this->lang->line('num_of_children'); ?></th>
 	                    <th><?= $this->lang->line('criminal_history'); ?></th>
 	                    <th><?= $this->lang->line('permanent_province'); ?></th>
@@ -164,6 +161,7 @@
 							$('p#lastName', '#modal_form_view').html(data.result.last_name);
 							$('p#age', '#modal_form_view').html(data.result.age);
 							$('p#eyeColor', '#modal_form_view').html(data.result.eye_color);
+							$('p#hairColor', '#modal_form_view').html(data.result.hair_color);
 							$('p#numOfChildren', '#modal_form_view').html(data.result.num_of_children);
 							$('p#criminalHistory', '#modal_form_view').html(data.result.criminal_history===1? '<?= $this->lang->line("yes"); ?>': '<?= $this->lang->line("no"); ?>');
 							$('p#permanentProvince', '#modal_form_view').html(data.result.permanent_province);
@@ -217,6 +215,7 @@
 							$('[name="lastName"]', '#modal_form_edit').val(data.result.prisoner.last_name);
 							$('[name="age"]', '#modal_form_edit').val(data.result.prisoner.age);
 							$('[name="eyeColor"]', '#modal_form_edit').val(data.result.prisoner.eye_color_id);
+							$('[name="hairColor"]', '#modal_form_edit').val(data.result.prisoner.hair_color_id);
 							$('[name="numOfChildren"]', '#modal_form_edit').val(data.result.prisoner.num_of_children);
 							$('[name="criminalHistory"]', '#modal_form_edit').prop('checked', (data.result.prisoner.criminal_history===1||data.result.prisoner.criminal_history==='1'? true: false));
 							$('[name="permanentProvince"]', '#modal_form_edit').val(data.result.prisoner.permanent_province_id);
@@ -455,6 +454,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('hair_color'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="hairColor"></p>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="numOfChildren"></p>
@@ -562,6 +567,17 @@
 									<select name="eyeColor" class="form-control" class="form-control">
 										<option></option>
 										<?php foreach ($eyeColorList as $key => $value) {
+											echo "<option value='" . $value->id . "'>" . $value->status . "</option>";
+										} ?>
+									</select>
+								</div>
+							</div>
+							<div class="form-group has-error">
+								<label class="control-label col-sm-4"><?= $this->lang->line('hair_color'); ?></label>
+								<div class="col-sm-8">
+									<select name="hairColor" class="form-control" class="form-control">
+										<option></option>
+										<?php foreach ($hairColorList as $key => $value) {
 											echo "<option value='" . $value->id . "'>" . $value->status . "</option>";
 										} ?>
 									</select>

@@ -70,6 +70,7 @@ $lang['middle_name'] = 'اسم پدر';
 $lang['last_name'] = 'اسم پدرکالان';
 $lang['age'] = 'عمر';
 $lang['eye_color'] = 'حالت مدنی';
+$lang['hair_color'] = 'حالت مدنی';
 $lang['num_of_children'] = 'تعداد اطفال';
 $lang['criminal_history'] = 'آیا سابقه جرمی دارد؟';
 $lang['permanent_province'] = 'سکونت اصلی(ولایت)';

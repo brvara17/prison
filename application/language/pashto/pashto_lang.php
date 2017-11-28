@@ -70,6 +70,7 @@ $lang['middle_name'] = 'دپلارنوم';
 $lang['last_name'] = 'دنیکه نوم';
 $lang['age'] = 'عمر';
 $lang['eye_color'] = 'مدنی حالت';
+$lang['hair_color'] = 'مدنی حالت';
 $lang['num_of_children'] = 'دماشومانو تعداد';
 $lang['criminal_history'] = 'آیاجرم یی کړی؟';
 $lang['permanent_province'] = 'ولایت';

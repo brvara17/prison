@@ -18,6 +18,7 @@ class General extends CI_Controller {
 		$this->load->model("province_model");
 		$this->load->model('district_model');
 		$this->load->model('eye_color_model');
+		$this->load->model('hair_color_model');		
 		$this->load->model('crime_type_model');
 		$this->load->model('crime_crime_type_model');
 		$this->load->model('crime_model');
@@ -55,6 +56,7 @@ class General extends CI_Controller {
 			$data['crimeTypeList'] = $this->crime_type_model->get_all('id, type_name_' . $this->language .' AS type_name');
 			$data['courtDecisionTypeList'] = $this->court_decision_type_model->get_all('id, decision_type_name_' . $this->language .' AS decision_type_name');
 			$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
+			$data['hairColorList'] = $this->hair_color_model->get_all('id, status_' . $this->language .' AS status');
 
 		    $this->load->view('new_edit_case', $data);
 		}
@@ -104,6 +106,7 @@ class General extends CI_Controller {
 			$data['crimeTypeList'] = $this->crime_type_model->get_all('id, type_name_' . $this->language .' AS type_name');
 			$data['courtDecisionTypeList'] = $this->court_decision_type_model->get_all('id, decision_type_name_' . $this->language .' AS decision_type_name');
 			$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
+			$data['hairColorList'] = $this->hair_color_model->get_all('id, status_' . $this->language .' AS status');			
 
 			$data['prisoner'] = $this->prisoner_model->get_by_crime_id_with_joins($crimeId, $this->language);
 			$data['crime'] = $this->crime_model->get_by_id_with_joins($crimeId, $this->language);
@@ -133,6 +136,7 @@ class General extends CI_Controller {
 			'age',
 			'criminal_history',
 			'eye_color_' . $this->language,
+			'hair_color_' . $this->language,
 			'num_of_children',
 			'present_province_' . $this->language,
 			'present_district_' . $this->language,
@@ -239,6 +243,7 @@ class General extends CI_Controller {
 			'age',
 			'criminal_history',
 			'eye_color_' . $this->language,
+			'hair_color_' . $this->language,
 			'permanent_province_' . $this->language,
 			'permanent_district_' . $this->language,
 
@@ -429,7 +434,8 @@ class General extends CI_Controller {
 		                'last_name' => $this->input->post('lastName'),
 		                'age' => $this->input->post('age'),
 		                'eye_color_id' => $this->input->post('eyeColor'), //EYE_COLOR_TRAIL if we add a new entry for the prisoner it needs to go in this array
-		                'num_of_children' => $this->input->post('numOfChildren'),
+						'hair_color_id' => $this->input->post('hairColor'), //EYE_COLOR_TRAIL if we add a new entry for the prisoner it needs to go in this array						
+						'num_of_children' => $this->input->post('numOfChildren'),
 		                'criminal_history' => isset($criminal_history)? 1: 0,
 		                'permanent_province_id' => $this->input->post('permanentProvince'),
 		                'permanent_district_id' => $this->input->post('permanentDistrict'),
@@ -586,7 +592,8 @@ class General extends CI_Controller {
 	                'middle_name' => $this->input->post('middleName'),
 	                'last_name' => $this->input->post('lastName'),
 	                'age' => $this->input->post('age'),
-	                'eye_color_id' => $this->input->post('eyeColor'),
+					'eye_color_id' => $this->input->post('eyeColor'),
+					'hair_color_id' => $this->input->post('hairColor'), //Hair_color if we add a new entry for the prisoner it needs to go in this array											
 	                'num_of_children' => $this->input->post('numOfChildren'),
 	                'criminal_history' => isset($criminal_history)? 1: 0,
 	                'permanent_province_id' => $this->input->post('permanentProvince'),

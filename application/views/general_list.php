@@ -34,6 +34,7 @@
 									<th><?= $this->lang->line('age'); ?></th>
 									<th><?= $this->lang->line('criminal_history'); ?></th>
 									<th><?= $this->lang->line('eye_color'); ?></th>
+									<th><?= $this->lang->line('hair_color'); ?></th>
 									<th><?= $this->lang->line('permanent_province'); ?></th>
 									<th><?= $this->lang->line('permanent_district'); ?></th>
 
@@ -65,6 +66,7 @@
 									<th><?= $this->lang->line('age'); ?></th>
 									<th><?= $this->lang->line('criminal_history'); ?></th>
 									<th><?= $this->lang->line('eye_color'); ?></th>
+									<th><?= $this->lang->line('hair_color'); ?></th>
 									<th><?= $this->lang->line('num_of_children'); ?></th>
 									<th><?= $this->lang->line('present_province'); ?></th>
 									<th><?= $this->lang->line('present_district'); ?></th>

@@ -18,6 +18,7 @@ class Prisoner extends CI_Controller {
 		$this->load->model("province_model");
 		$this->load->model('district_model');
 		$this->load->model('eye_color_model');
+		$this->load->model('hair_color_model');		
 		$this->load->library('my_authentication');
 
 		$this->language = $this->session->userdata('language');
@@ -30,6 +31,7 @@ class Prisoner extends CI_Controller {
 		$data['provincesList'] = $this->province_model->get_all('id, name_' . $this->language .' AS name');
 		$data['districtsList'] = $this->district_model->get_all('id, name_' . $this->language .' AS name, province_id');
 		$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
+		$data['hairColorList'] = $this->hair_color_model->get_all('id, status_' . $this->language .' AS status');
 	    $this->load->view('prisoner_list', $data);
 	}
 
@@ -46,6 +48,7 @@ class Prisoner extends CI_Controller {
 			'last_name',
 			'age',
 			'eye_color_' . $this->language,
+			'hair_color_' . $this->language,
 			'num_of_children',
 			'criminal_history',
 			'permanent_province_' . $this->language,
@@ -216,7 +219,8 @@ class Prisoner extends CI_Controller {
 	                'middle_name' => $this->input->post('middleName'),
 	                'last_name' => $this->input->post('lastName'),
 	                'age' => $this->input->post('age'),
-	                'eye_color_id' => $this->input->post('eyeColor'),
+					'eye_color_id' => $this->input->post('eyeColor'),
+					'hair_color_id' => $this->input->post('hairColor'),
 	                'num_of_children' => $this->input->post('numOfChildren'),
 	                'criminal_history' => isset($criminal_history)? 1: 0,
 	                'permanent_province_id' => $this->input->post('permanentProvince'),
@@ -302,7 +306,8 @@ class Prisoner extends CI_Controller {
 	                'middle_name' => $this->input->post('middleName'),
 	                'last_name' => $this->input->post('lastName'),
 	                'age' => $this->input->post('age'),
-	                'eye_color_id' => $this->input->post('eyeColor'),
+					'eye_color_id' => $this->input->post('eyeColor'),
+					'hair_color_id' => $this->input->post('hairColor'),
 	                'num_of_children' => $this->input->post('numOfChildren'),
 	                'criminal_history' => isset($criminal_history)? 1: 0,
 	                'permanent_province_id' => $this->input->post('permanentProvince'),

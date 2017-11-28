@@ -98,6 +98,12 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('hair_color'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="hairColor"></p>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="numOfChildren"></p>
@@ -196,6 +202,21 @@
 										<option></option>
 										<?php foreach ($eyeColorList as $key => $value) {
 											if ($isEdit && $prisoner->eye_color_id == $value->id) {
+												echo "<option value='" . $value->id . "' selected>" . $value->status . "</option>";
+											} else {
+												echo "<option value='" . $value->id . "'>" . $value->status . "</option>";
+											}
+										} ?>
+									</select>
+								</div>
+							</div>							
+							<div class="form-group has-error">
+								<label class="control-label col-sm-4"><?= $this->lang->line('hair_color'); ?></label>
+								<div class="col-sm-8">
+									<select name="hairColor" class="form-control" class="form-control">
+										<option></option>
+										<?php foreach ($hairColorList as $key => $value) {
+											if ($isEdit && $prisoner->hair_color_id == $value->id) {
 												echo "<option value='" . $value->id . "' selected>" . $value->status . "</option>";
 											} else {
 												echo "<option value='" . $value->id . "'>" . $value->status . "</option>";
@@ -761,6 +782,7 @@
 								$('p#lastName', '#newCaseRegistrationForm').html(data.result.last_name);
 								$('p#age', '#newCaseRegistrationForm').html(data.result.age);
 								$('p#eyeColor', '#newCaseRegistrationForm').html(data.result.eye_color);
+								$('p#hairColor', '#newCaseRegistrationForm').html(data.result.hair_color);
 								$('p#numOfChildren', '#newCaseRegistrationForm').html(data.result.num_of_children);
 								$('p#criminalHistory', '#newCaseRegistrationForm').html(data.result.criminal_history===1? 'Yes': 'No');
 								$('p#permanentProvince', '#newCaseRegistrationForm').html(data.result.permanent_province);
