@@ -561,7 +561,7 @@
 								<div class="col-sm-8">
 									<select name="eyeColor" class="form-control" class="form-control">
 										<option></option>
-										<?php foreach ($maritalStatusList as $key => $value) {
+										<?php foreach ($eyeColorList as $key => $value) {
 											echo "<option value='" . $value->id . "'>" . $value->status . "</option>";
 										} ?>
 									</select>

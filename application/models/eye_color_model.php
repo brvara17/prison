@@ -4,7 +4,7 @@
  *
  */
 
-class Marital_status_model extends CI_Model {
+class eye_color_model extends CI_Model {
 
     // table name
     private $tableName= 'eye_color';

@@ -17,7 +17,7 @@ class Prisoner extends CI_Controller {
 		$this->load->model('prisoner_model');
 		$this->load->model("province_model");
 		$this->load->model('district_model');
-		$this->load->model('marital_status_model');
+		$this->load->model('eye_color_model');
 		$this->load->library('my_authentication');
 
 		$this->language = $this->session->userdata('language');
@@ -29,7 +29,7 @@ class Prisoner extends CI_Controller {
 	{
 		$data['provincesList'] = $this->province_model->get_all('id, name_' . $this->language .' AS name');
 		$data['districtsList'] = $this->district_model->get_all('id, name_' . $this->language .' AS name, province_id');
-		$data['maritalStatusList'] = $this->marital_status_model->get_all('id, status_' . $this->language .' AS status');
+		$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
 	    $this->load->view('prisoner_list', $data);
 	}
 
@@ -45,7 +45,7 @@ class Prisoner extends CI_Controller {
 			'middle_name',
 			'last_name',
 			'age',
-			'marital_status_' . $this->language,
+			'eye_color_' . $this->language,
 			'num_of_children',
 			'criminal_history',
 			'permanent_province_' . $this->language,

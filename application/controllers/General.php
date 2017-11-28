@@ -17,7 +17,7 @@ class General extends CI_Controller {
 		$this->load->model('prisoner_model');
 		$this->load->model("province_model");
 		$this->load->model('district_model');
-		$this->load->model('marital_status_model');
+		$this->load->model('eye_color_model');
 		$this->load->model('crime_type_model');
 		$this->load->model('crime_crime_type_model');
 		$this->load->model('crime_model');
@@ -54,7 +54,7 @@ class General extends CI_Controller {
 			$data['districtsList'] = $this->district_model->get_all('id, name_' . $this->language .' AS name, province_id');
 			$data['crimeTypeList'] = $this->crime_type_model->get_all('id, type_name_' . $this->language .' AS type_name');
 			$data['courtDecisionTypeList'] = $this->court_decision_type_model->get_all('id, decision_type_name_' . $this->language .' AS decision_type_name');
-			$data['maritalStatusList'] = $this->marital_status_model->get_all('id, status_' . $this->language .' AS status');
+			$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
 
 		    $this->load->view('new_edit_case', $data);
 		}
@@ -103,7 +103,7 @@ class General extends CI_Controller {
 			$data['districtsList'] = $this->district_model->get_all('id, name_' . $this->language .' AS name, province_id');
 			$data['crimeTypeList'] = $this->crime_type_model->get_all('id, type_name_' . $this->language .' AS type_name');
 			$data['courtDecisionTypeList'] = $this->court_decision_type_model->get_all('id, decision_type_name_' . $this->language .' AS decision_type_name');
-			$data['maritalStatusList'] = $this->marital_status_model->get_all('id, status_' . $this->language .' AS status');
+			$data['eyeColorList'] = $this->eye_color_model->get_all('id, status_' . $this->language .' AS status');
 
 			$data['prisoner'] = $this->prisoner_model->get_by_crime_id_with_joins($crimeId, $this->language);
 			$data['crime'] = $this->crime_model->get_by_id_with_joins($crimeId, $this->language);
@@ -132,7 +132,7 @@ class General extends CI_Controller {
 			'last_name',
 			'age',
 			'criminal_history',
-			'marital_status_' . $this->language,
+			'eye_color_' . $this->language,
 			'num_of_children',
 			'present_province_' . $this->language,
 			'present_district_' . $this->language,
@@ -238,7 +238,7 @@ class General extends CI_Controller {
 			'last_name',
 			'age',
 			'criminal_history',
-			'marital_status_' . $this->language,
+			'eye_color_' . $this->language,
 			'permanent_province_' . $this->language,
 			'permanent_district_' . $this->language,
 
