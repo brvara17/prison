@@ -13,7 +13,7 @@
 			</h3>
 			
 			<hr />
-			<!-- <table id="table" class="table table-striped table-hover" cellspacing="0" width="100%"> -->
+			<!-- <table id="table" class="table table-striped table-hover" cellspacing="0" width="100%"> Edit 11/28 -->
 			<table id="table" class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
 				<thead>
 					<tr>
@@ -22,10 +22,24 @@
 	                    <th><?= $this->lang->line('name'); ?></th>
 	                    <th><?= $this->lang->line('middle_name'); ?></th>
 	                    <th><?= $this->lang->line('last_name'); ?></th>
+						<th><?= $this->lang->line('street_num'); ?></th>
+						<th><?= $this->lang->line('street_name'); ?></th>
+						<th><?= $this->lang->line('apartment_num'); ?></th>
+						<th><?= $this->lang->line('city'); ?></th>
+						<th><?= $this->lang->line('zipcode'); ?></th>
+						<th><?= $this->lang->line('phone'); ?></th>
+						<th><?= $this->lang->line('birth_city'); ?></th>
+						<th><?= $this->lang->line('birth_country'); ?></th>
+						<th><?= $this->lang->line('ssn'); ?></th>
+						<th><?= $this->lang->line('sex'); ?></th>
+						<th><?= $this->lang->line('height_feet'); ?></th>
+						<th><?= $this->lang->line('height_inches'); ?></th>
+						<th><?= $this->lang->line('weight'); ?></th>
 	                    <th><?= $this->lang->line('age'); ?></th>
 	                    <th><?= $this->lang->line('eye_color'); ?></th>
 						<th><?= $this->lang->line('hair_color'); ?></th>
 	                    <th><?= $this->lang->line('num_of_children'); ?></th>
+						<th><?= $this->lang->line('property_management'); ?></th>
 	                    <th><?= $this->lang->line('criminal_history'); ?></th>
 	                    <th><?= $this->lang->line('permanent_province'); ?></th>
 	                    <th><?= $this->lang->line('permanent_district'); ?></th>
@@ -146,7 +160,7 @@
 				save_method = 'update';
 				$('#form', '#modal_form_view')[0].reset(); // reset form on modals
 
-				//Ajax Load data from ajax
+				//Ajax Load data from ajax. Edit 11/28.
 				$.ajax({
 					url : "<?php echo site_url('prisoner/view/')?>/" + id,
 					type: "GET",
@@ -159,10 +173,24 @@
 							$('p#name', '#modal_form_view').html(data.result.name);
 							$('p#middleName', '#modal_form_view').html(data.result.middle_name);
 							$('p#lastName', '#modal_form_view').html(data.result.last_name);
+							$('p#streetNum', '#modal_form_view').html(data.result.street_num);
+							$('p#streetName', '#modal_form_view').html(data.result.street_name);
+							$('p#apartmentNum', '#modal_form_view').html(data.result.apartment_num);
+							$('p#city', '#modal_form_view').html(data.result.city);
+							$('p#zipcode', '#modal_form_view').html(data.result.zipcode);
+							$('p#phone', '#modal_form_view').html(data.result.phone);
+							$('p#birthCity', '#modal_form_view').html(data.result.birth_city);
+							$('p#birthCountry', '#modal_form_view').html(data.result.birth_country);
+							$('p#ssn', '#modal_form_view').html(data.result.ssn);
+							$('p#sex', '#modal_form_view').html(data.result.sex);
+							$('p#heightFeet', '#modal_form_view').html(data.result.height_feet);
+							$('p#heightInches', '#modal_form_view').html(data.result.height_inches);
+							$('p#weight', '#modal_form_view').html(data.result.weight);
 							$('p#age', '#modal_form_view').html(data.result.age);
 							$('p#eyeColor', '#modal_form_view').html(data.result.eye_color);
 							$('p#hairColor', '#modal_form_view').html(data.result.hair_color);
 							$('p#numOfChildren', '#modal_form_view').html(data.result.num_of_children);
+							$('p#propertyManagement', '#modal_form_view').html(data.result.property_management);
 							$('p#criminalHistory', '#modal_form_view').html(data.result.criminal_history===1? '<?= $this->lang->line("yes"); ?>': '<?= $this->lang->line("no"); ?>');
 							$('p#permanentProvince', '#modal_form_view').html(data.result.permanent_province);
 							$('p#permanentDistrict', '#modal_form_view').html(data.result.permanent_district);
@@ -199,7 +227,7 @@
 				$('[name="permanentDistrict"]', '#modal_form_edit').empty();
 				$('[name="presentDistrict"]', '#modal_form_edit').empty();
 
-				//Ajax Load data from ajax
+				//Ajax Load data from ajax. Edit 11/28
 				$.ajax({
 					url : "<?php echo site_url('prisoner/edit/')?>/" + id,
 					type: "GET",
@@ -213,10 +241,24 @@
 							$('[name="name"]', '#modal_form_edit').val(data.result.prisoner.name);
 							$('[name="middleName"]', '#modal_form_edit').val(data.result.prisoner.middle_name);
 							$('[name="lastName"]', '#modal_form_edit').val(data.result.prisoner.last_name);
+							$('[name="streetNum"]', '#modal_form_edit').val(data.result.prisoner.street_num);
+							$('[name="streetName"]', '#modal_form_edit').val(data.result.prisoner.street_name);
+							$('[name="apartmentNum"]', '#modal_form_edit').val(data.result.prisoner.apartment_num);
+							$('[name="city"]', '#modal_form_edit').val(data.result.prisoner.city);
+							$('[name="zipcode"]', '#modal_form_edit').val(data.result.prisoner.zipcode);
+							$('[name="phone"]', '#modal_form_edit').val(data.result.prisoner.phone);
+							$('[name="birthCity"]', '#modal_form_edit').val(data.result.prisoner.birth_city);
+							$('[name="birthCountry"]', '#modal_form_edit').val(data.result.prisoner.birth_country);
+							$('[name="ssn"]', '#modal_form_edit').val(data.result.prisoner.ssn);
+							$('[name="sex"]', '#modal_form_edit').val(data.result.prisoner.sex);
+							$('[name="heightFeet"]', '#modal_form_edit').val(data.result.prisoner.height_feet);
+							$('[name="heightInches"]', '#modal_form_edit').val(data.result.prisoner.height_inches);
+							$('[name="weight"]', '#modal_form_edit').val(data.result.prisoner.weight);
 							$('[name="age"]', '#modal_form_edit').val(data.result.prisoner.age);
 							$('[name="eyeColor"]', '#modal_form_edit').val(data.result.prisoner.eye_color_id);
 							$('[name="hairColor"]', '#modal_form_edit').val(data.result.prisoner.hair_color_id);
 							$('[name="numOfChildren"]', '#modal_form_edit').val(data.result.prisoner.num_of_children);
+							$('[name="propertyManagement"]', '#modal_form_edit').val(data.result.prisoner.property_management);
 							$('[name="criminalHistory"]', '#modal_form_edit').prop('checked', (data.result.prisoner.criminal_history===1||data.result.prisoner.criminal_history==='1'? true: false));
 							$('[name="permanentProvince"]', '#modal_form_edit').val(data.result.prisoner.permanent_province_id);
 
@@ -401,7 +443,7 @@
 			}
         </script>
 
-        <!-- Bootstrap modal View-->
+        <!-- Bootstrap modal View Edit 11/28 -->
 		<div class="modal fade" id="modal_form_view" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -442,6 +484,84 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_num'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="streetNum"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_name'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="streetName"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('apartment_num'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="apartmentNum"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('city'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="city"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('zipcode'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="zipcode"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('phone'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="phone"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_city'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="birthCity"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_country'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="birthCountry"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('ssn'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="ssn"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('sex'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="sex"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_feet'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="heightFeet"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_inches'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="heightInches"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('weight'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="weight"></p>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('age'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="age"></p>
@@ -463,6 +583,12 @@
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="numOfChildren"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('property_management'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="propertyManagement"></p>
 								</div>
 							</div>
 							<div class="form-group">
@@ -513,7 +639,7 @@
 		</div><!-- /.modal -->
 		<!-- End Bootstrap modal -->
 
-		<!-- Bootstrap modal Edit-->
+		<!-- Bootstrap modal Edit 11/28-->
 		<div class="modal fade" id="modal_form_edit" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -556,6 +682,85 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_num'); ?></label>
+								<div class="col-sm-8">
+									<input name="streetNum" placeholder="Street Number" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_name'); ?></label>
+								<div class="col-sm-8">
+									<input name="streetName" placeholder="Street Name" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('apartment_num'); ?></label>
+								<div class="col-sm-8">
+									<input name="apartmentNum" placeholder="Apartment Number" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('city'); ?></label>
+								<div class="col-sm-8">
+									<input name="city" placeholder="City" class="form-control" type="text">
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('zipcode'); ?></label>
+								<div class="col-sm-8">
+									<input name="zipcode" placeholder="Zipcode" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('phone'); ?></label>
+								<div class="col-sm-8">
+									<input name="phone" placeholder="Phone Number" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_city'); ?></label>
+								<div class="col-sm-8">
+									<input name="birthCity" placeholder="Birth City" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_country'); ?></label>
+								<div class="col-sm-8">
+									<input name="birthCountry" placeholder="Birth Country" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('ssn'); ?></label>
+								<div class="col-sm-8">
+									<input name="ssn" placeholder="SSN" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('sex'); ?></label>
+								<div class="col-sm-8">
+									<input name="sex" placeholder="Sex" class="form-control" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_feet'); ?></label>
+								<div class="col-sm-8">
+									<input name="heightFeet" placeholder="Height Feet" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_inches'); ?></label>
+								<div class="col-sm-8">
+									<input name="heightInches" placeholder="Height Inches" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('weight'); ?></label>
+								<div class="col-sm-8">
+									<input name="weight" placeholder="Weight" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('age'); ?></label>
 								<div class="col-sm-8">
 									<input name="age" placeholder="Age" class="form-control" type="number">
@@ -587,6 +792,12 @@
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<input name="numOfChildren" placeholder="Number of Children" class="form-control" type="number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('property_management'); ?></label>
+								<div class="col-sm-8">
+									<input name="propertyManagement" placeholder="Property Management" class="form-control" type="text">
 								</div>
 							</div>
 							<div class="form-group">

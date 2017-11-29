@@ -21,7 +21,7 @@
 					<li role="presentation"><a href="#detailTable" aria-controls="detailTable" role="tab" data-toggle="tab"><?= $this->lang->line('detail_view'); ?></a></li>
 				</ul>
 
-				<!-- Tab panes -->
+				<!-- Tab panes Edit 11/28 -->
 				<div class="tab-content" style="padding-top: 10px;">
 					<div role="tabpanel" class="tab-pane active" id="quickTable">
 						<table class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
@@ -31,10 +31,24 @@
 									<th><?= $this->lang->line('name'); ?></th>
 									<th><?= $this->lang->line('middle_name'); ?></th>
 									<th><?= $this->lang->line('last_name'); ?></th>
+									<th><?= $this->lang->line('street_num'); ?></th>
+									<th><?= $this->lang->line('street_name'); ?></th>
+									<th><?= $this->lang->line('apartment_num'); ?></th>
+									<th><?= $this->lang->line('city'); ?></th>
+									<th><?= $this->lang->line('zipcode'); ?></th>
+									<th><?= $this->lang->line('phone'); ?></th>
+									<th><?= $this->lang->line('birth_city'); ?></th>
+									<th><?= $this->lang->line('birth_country'); ?></th>
+									<th><?= $this->lang->line('ssn'); ?></th>
+									<th><?= $this->lang->line('sex'); ?></th>
+									<th><?= $this->lang->line('height_feet'); ?></th>
+									<th><?= $this->lang->line('height_inches'); ?></th>
+									<th><?= $this->lang->line('weight'); ?></th>
 									<th><?= $this->lang->line('age'); ?></th>
 									<th><?= $this->lang->line('criminal_history'); ?></th>
 									<th><?= $this->lang->line('eye_color'); ?></th>
 									<th><?= $this->lang->line('hair_color'); ?></th>
+									<th><?= $this->lang->line('property_management'); ?></th>
 									<th><?= $this->lang->line('permanent_province'); ?></th>
 									<th><?= $this->lang->line('permanent_district'); ?></th>
 
@@ -54,7 +68,7 @@
 							<tbody></tbody>
 						</table>
 					</div>
-
+					<!-- detail table Edit 11/28 -->
 					<div role="tabpanel" class="tab-pane" id="detailTable">
 						<table class="table table-hover table-striped table-bordered" cellspacing="0" width="100%">
 							<thead>
@@ -63,11 +77,25 @@
 									<th><?= $this->lang->line('name'); ?></th>
 									<th><?= $this->lang->line('middle_name'); ?></th>
 									<th><?= $this->lang->line('last_name'); ?></th>
+									<th><?= $this->lang->line('street_num'); ?></th>
+									<th><?= $this->lang->line('street_name'); ?></th>
+									<th><?= $this->lang->line('apartment_num'); ?></th>
+									<th><?= $this->lang->line('city'); ?></th>
+									<th><?= $this->lang->line('zipcode'); ?></th>
+									<th><?= $this->lang->line('phone'); ?></th>
+									<th><?= $this->lang->line('birth_city'); ?></th>
+									<th><?= $this->lang->line('birth_country'); ?></th>
+									<th><?= $this->lang->line('ssn'); ?></th>
+									<th><?= $this->lang->line('sex'); ?></th>
+									<th><?= $this->lang->line('height_feet'); ?></th>
+									<th><?= $this->lang->line('height_inches'); ?></th>
+									<th><?= $this->lang->line('weight'); ?></th>
 									<th><?= $this->lang->line('age'); ?></th>
 									<th><?= $this->lang->line('criminal_history'); ?></th>
 									<th><?= $this->lang->line('eye_color'); ?></th>
 									<th><?= $this->lang->line('hair_color'); ?></th>
 									<th><?= $this->lang->line('num_of_children'); ?></th>
+									<th><?= $this->lang->line('property_management'); ?></th>
 									<th><?= $this->lang->line('present_province'); ?></th>
 									<th><?= $this->lang->line('present_district'); ?></th>
 									<th><?= $this->lang->line('permanent_province'); ?></th>

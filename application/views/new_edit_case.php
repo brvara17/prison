@@ -53,7 +53,7 @@
 
 					<div class="row" id="existingPrisonForm" style="display: none;">
 						<input type="hidden" value="" name="prisoner_id"/>
-	<!-- ---------------------------- view Prisoer Column 1 --------------------------------------- -->
+	<!-- ---------------------------- view Prisoer Column 1 Edit 11/28 --------------------------------------- -->
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('id'); ?></label>
@@ -86,6 +86,84 @@
 								</div>
 							</div>
 							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_num'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="streetNum"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_name'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="streetName"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('apartment_num'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="apartmentNum"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('city'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="city"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('zipcode'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="zipcode"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('phone'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="phone"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_city'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="birthCity"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_country'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="birthCountry"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('ssn'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="ssn"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('sex'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="sex"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_feet'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="heightFeet"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_inches'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="heightInches"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('weight'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="weight"></p>
+								</div>
+							</div>
+							<div class="form-group">
 								<label class="col-sm-4 control-label"><?= $this->lang->line('age'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="age"></p>
@@ -107,6 +185,12 @@
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<p class="form-control-static" id="numOfChildren"></p>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('property_management'); ?></label>
+								<div class="col-sm-8">
+									<p class="form-control-static" id="property_management"></p>
 								</div>
 							</div>
 						</div>
@@ -159,7 +243,7 @@
 					<?php } else { ?>
 					<div class="row" id="newPrisonForm">
 					<?php } ?>
-	<!-- ---------------------------- new Prisoer Column 1 --------------------------------------- -->
+	<!-- ---------------------------- new Prisoer Column 1 Edit 11/28 --------------------------------------- -->
 						<div class="col-sm-4">
 							<?php if($isEdit) { ?>
 								<input type="hidden" value="<?= $prisoner->id ?>" name="prisoner_id"/>
@@ -187,6 +271,84 @@
 								<label class="col-sm-4 control-label"><?= $this->lang->line('last_name'); ?></label>
 								<div class="col-sm-8">
 									<input name="lastName" placeholder="Last Name" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->last_name . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_num'); ?></label>
+								<div class="col-sm-8">
+									<input name="streetNum" placeholder="Street Number" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->street_num . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('street_name'); ?></label>
+								<div class="col-sm-8">
+									<input name="streetName" placeholder="Street Name" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->street_name . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('apartment_num'); ?></label>
+								<div class="col-sm-8">
+									<input name="apartmentNum" placeholder="Apartment Number" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->apartment_num . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('city'); ?></label>
+								<div class="col-sm-8">
+									<input name="city" placeholder="City" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->city . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('zipcode'); ?></label>
+								<div class="col-sm-8">
+									<input name="zipcode" placeholder="Zipcode" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->zipcode . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('phone'); ?></label>
+								<div class="col-sm-8">
+									<input name="phone" placeholder="Phone Number" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->phone . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_city'); ?></label>
+								<div class="col-sm-8">
+									<input name="birthCity" placeholder="Birth City" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->birth_city . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('birth_country'); ?></label>
+								<div class="col-sm-8">
+									<input name="birthCountry" placeholder="Birth Country" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->birth_country . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('ssn'); ?></label>
+								<div class="col-sm-8">
+									<input name="ssn" placeholder="SSN" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->ssn . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('sex'); ?></label>
+								<div class="col-sm-8">
+									<input name="sex" placeholder="Sex" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->sex . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_feet'); ?></label>
+								<div class="col-sm-8">
+									<input name="heightFeet" placeholder="Height Feet" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->height_feet . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('height_inches'); ?></label>
+								<div class="col-sm-8">
+									<input name="heightInches" placeholder="Height Inches" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->height_inches . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('weight'); ?></label>
+								<div class="col-sm-8">
+									<input name="weight" placeholder="Weight" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->weight . '"': ''; ?> >
 								</div>
 							</div>
 							<div class="form-group">
@@ -229,6 +391,12 @@
 								<label class="col-sm-4 control-label"><?= $this->lang->line('num_of_children'); ?></label>
 								<div class="col-sm-8">
 									<input name="numOfChildren" placeholder="Number of Children" class="form-control" type="number" <?php echo $isEdit? 'value="' . $prisoner->num_of_children . '"': ''; ?> >
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label"><?= $this->lang->line('property_management'); ?></label>
+								<div class="col-sm-8">
+									<input name="propertyManagement" placeholder="Property Management" class="form-control" type="text" <?php echo $isEdit? 'value="' . $prisoner->property_management . '"': ''; ?> >
 								</div>
 							</div>
 						</div>
@@ -764,7 +932,7 @@
 			{
 				$('#existingPrisonForm', '#newCaseRegistrationForm').slideUp();
 				clean_prisoner_view_form();
-				//Ajax Load data from ajax
+				//Ajax Load data from ajax. Edit 11/28
 				$.ajax({
 					url : "<?php echo site_url('prisoner/view/')?>/" + id,
 					type: "GET",
@@ -780,10 +948,24 @@
 								$('p#name', '#newCaseRegistrationForm').html(data.result.name);
 								$('p#middleName', '#newCaseRegistrationForm').html(data.result.middle_name);
 								$('p#lastName', '#newCaseRegistrationForm').html(data.result.last_name);
+								$('p#streetNum', '#newCaseRegistrationForm').html(data.result.street_num);
+								$('p#streetName', '#newCaseRegistrationForm').html(data.result.street_name);
+								$('p#apartmentNum', '#newCaseRegistrationForm').html(data.result.apartment_num);
+								$('p#city', '#newCaseRegistrationForm').html(data.result.city);
+								$('p#zipcode', '#newCaseRegistrationForm').html(data.result.zipcode);
+								$('p#phone', '#newCaseRegistrationForm').html(data.result.phone);
+								$('p#birthCity', '#newCaseRegistrationForm').html(data.result.birth_city);
+								$('p#birthCountry', '#newCaseRegistrationForm').html(data.result.birthCountry);
+								$('p#ssn', '#newCaseRegistrationForm').html(data.result.ssn);
+								$('p#sex', '#newCaseRegistrationForm').html(data.result.sex);
+								$('p#heightFeet', '#newCaseRegistrationForm').html(data.result.height_feet);
+								$('p#heightInches', '#newCaseRegistrationForm').html(data.result.height_inches);
+								$('p#weight', '#newCaseRegistrationForm').html(data.result.weight);
 								$('p#age', '#newCaseRegistrationForm').html(data.result.age);
 								$('p#eyeColor', '#newCaseRegistrationForm').html(data.result.eye_color);
 								$('p#hairColor', '#newCaseRegistrationForm').html(data.result.hair_color);
 								$('p#numOfChildren', '#newCaseRegistrationForm').html(data.result.num_of_children);
+								$('p#propertyManagement', '#newCaseRegistrationForm').html(data.result.property_management);
 								$('p#criminalHistory', '#newCaseRegistrationForm').html(data.result.criminal_history===1? 'Yes': 'No');
 								$('p#permanentProvince', '#newCaseRegistrationForm').html(data.result.permanent_province);
 								$('p#permanentDistrict', '#newCaseRegistrationForm').html(data.result.permanent_district);

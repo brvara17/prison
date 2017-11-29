@@ -34,7 +34,7 @@ class Prisoner extends CI_Controller {
 		$data['hairColorList'] = $this->hair_color_model->get_all('id, status_' . $this->language .' AS status');
 	    $this->load->view('prisoner_list', $data);
 	}
-
+	// Edit 11/28
 	public function prisoner_list()
 	{
 		$this->load->model("datatables_model");
@@ -46,10 +46,24 @@ class Prisoner extends CI_Controller {
 			'name',
 			'middle_name',
 			'last_name',
+			'street_num',
+			'street_name',
+			'apartment_num',
+			'city',
+			'zipcode',
+			'phone',
+			'birth_city',
+			'birth_country',
+			'ssn',
+			'sex',
+			'height_feet',
+			'height_inches',
+			'weight',
 			'age',
 			'eye_color_' . $this->language,
 			'hair_color_' . $this->language,
 			'num_of_children',
+			'property_management',
 			'criminal_history',
 			'permanent_province_' . $this->language,
 			'permanent_district_' . $this->language,
@@ -182,7 +196,7 @@ class Prisoner extends CI_Controller {
 		}
 	}
 
-	// add new record
+	// add new record. Edit 11/28
 	public function add()
     {
     	$response['success'] = TRUE;
@@ -217,11 +231,25 @@ class Prisoner extends CI_Controller {
 	        		'license_number' => $this->input->post('licenseNumber'),
 	                'name' => $this->input->post('name'),
 	                'middle_name' => $this->input->post('middleName'),
-	                'last_name' => $this->input->post('lastName'),
+					'last_name' => $this->input->post('lastName'),
+					'street_num' => $this->input->post('streetNum'),
+					'street_name' => $this->input->post('streetName'),
+					'apartment_num' => $this->input->post('apartmentNum'),
+					'city' => $this->input->post('city'),
+					'zipcode' => $this->input->post('zipcode'),
+					'phone' => $this->input->post('phone'),
+					'birth_city' => $this->input->post('birthCity'),
+					'birth_country' => $this->input->post('birthCountry'),
+					'ssn' => $this->input->post('ssn'),
+					'sex' => $this->input->post('sex'),
+					'height_feet' => $this->input->post('heightFeet'),
+					'height_inches' => $this->input->post('heightInches'),
+					'weight' => $this->input->post('weight'),
 	                'age' => $this->input->post('age'),
 					'eye_color_id' => $this->input->post('eyeColor'),
 					'hair_color_id' => $this->input->post('hairColor'),
-	                'num_of_children' => $this->input->post('numOfChildren'),
+					'num_of_children' => $this->input->post('numOfChildren'),
+					'property_management' => $this->input->post('propertyManagement'),
 	                'criminal_history' => isset($criminal_history)? 1: 0,
 	                'permanent_province_id' => $this->input->post('permanentProvince'),
 	                'permanent_district_id' => $this->input->post('permanentDistrict'),
@@ -295,7 +323,7 @@ class Prisoner extends CI_Controller {
 		}
 		else
 		{
-	    	// start of transaction
+	    	// start of transaction. Edit 11/28
 			$this->db->trans_begin();
 
 	    	$criminal_history = $this->input->post('criminalHistory');
@@ -304,11 +332,25 @@ class Prisoner extends CI_Controller {
 	        		'license_number' => $this->input->post('licenseNumber'),
 	                'name' => $this->input->post('name'),
 	                'middle_name' => $this->input->post('middleName'),
-	                'last_name' => $this->input->post('lastName'),
+					'last_name' => $this->input->post('lastName'),
+					'street_num' => $this->input->post('streetNum'),
+					'street_name' => $this->input->post('streetName'),
+					'apartment_num' => $this->input->post('apartmentNum'),
+					'city' => $this->input->post('city'),
+					'zipcode' => $this->input->post('zipcode'),
+					'phone' => $this->input->post('phone'),
+					'birth_city' => $this->input->post('birthCity'),
+					'birth_country' => $this->input->post('birthCountry'),
+					'ssn' => $this->input->post('ssn'),
+					'sex' => $this->input->post('sex'),
+					'height_feet' => $this->input->post('heightFeet'),
+					'height_inches' => $this->input->post('heightInches'),
+					'weight' => $this->input->post('weight'),
 	                'age' => $this->input->post('age'),
 					'eye_color_id' => $this->input->post('eyeColor'),
 					'hair_color_id' => $this->input->post('hairColor'),
-	                'num_of_children' => $this->input->post('numOfChildren'),
+					'num_of_children' => $this->input->post('numOfChildren'),
+					'property_management' => $this->input->post('propertyManagement'),
 	                'criminal_history' => isset($criminal_history)? 1: 0,
 	                'permanent_province_id' => $this->input->post('permanentProvince'),
 	                'permanent_district_id' => $this->input->post('permanentDistrict'),
